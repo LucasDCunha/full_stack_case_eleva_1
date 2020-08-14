@@ -14,7 +14,6 @@ class SchoolsController < ApplicationController
 
   def create
     @school = School.new(school_params)
-    # @school = School.new(name: params[:name])
     if @school.save
       redirect_to root_path
     else
