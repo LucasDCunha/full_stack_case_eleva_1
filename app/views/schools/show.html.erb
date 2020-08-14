@@ -1,0 +1,6 @@
+<%= @school.name %>
+<br>
+<%= link_to "Editar", edit_school_path %> <br>
+<%= button_to 'Delete', school_path(@school), method: :delete, data: {confirm: "Are you sure?"} %>
+<br><br><br><br>
+<%= link_to "Voltar", schools_path %>
