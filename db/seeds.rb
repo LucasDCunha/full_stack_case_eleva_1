@@ -8,6 +8,14 @@
 
 require 'faker'
 
+School.delete_all
+
 10.times do
-  School.create(name: Faker::Movies::LordOfTheRings.character)
+  school = School.create(name: Faker::Movies::LordOfTheRings.character)
+  10.times do
+    school.groups << Group.create(name: rand(1..99))
+  end
+
 end
+
+puts "seeding complete"
