@@ -1,1 +1,7 @@
-<h1>new</h1>
+<%= simple_form_for @group, url: school_groups_path(params["school_id"], @group) do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Voltar", root_path %>
+

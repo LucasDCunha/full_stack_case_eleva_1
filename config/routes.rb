@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # resources :school, only: :destroy
   resources :schools do
-    resources :groups
+    resources :groups, only: [:new, :create, :destroy]
   end
 end

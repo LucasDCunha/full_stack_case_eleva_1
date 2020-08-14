@@ -1,6 +1,14 @@
 <%= @school.name %>
 <br>
-<%= link_to "Editar", edit_school_path %> <br>
-<%= button_to 'Delete', school_path(@school), method: :delete, data: {confirm: "Are you sure?"} %>
+<ul>
+  <% @school.groups.each do |group| %>
+    <li> <%= group.name %> <%= button_to 'Delete', school_group_path(@school, group), method: :delete, data: {confirm: "Tem certeza?"} %>
+ </li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Adicionar turma", new_school_group_path(@school) %> <br>
+<%= link_to "Editar escola", edit_school_path %> <br>
+<%= button_to 'Delete', school_path(@school), method: :delete, data: {confirm: "Tem certeza?"} %>
 <br><br><br><br>
 <%= link_to "Voltar", schools_path %>
