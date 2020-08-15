@@ -56,5 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Faker gem for seeds
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
-#Simple form gem for easy forms
+# Simple form gem for easy forms
 gem 'simple_form'
+
+# font-awsome for icons
+gem 'font-awesome-sass','~> 5.6.1'

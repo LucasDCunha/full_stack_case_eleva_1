@@ -1,6 +1,15 @@
+<header>
+  <%= link_to root_path do %>
+    <%= image_tag("cropped-logo_eleva.png", size: "100x100", class: "img") %>
+  <% end %>
+  <div>
+    <%= link_to "Voltar", schools_path, class: "btn btn-outline-primary" %>
+  </div>
+</header>
+
 <%= simple_form_for @school do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: "Nome:" %>
+  <%= f.input :address %>
+  <%= f.input :city %>
   <%= f.button :submit %>
 <% end %>
-
-<%= link_to "Voltar", school_path(@school) %>
