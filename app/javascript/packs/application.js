@@ -19,7 +19,7 @@ window.$ = window.jQuery = jQuery;
 
 require("bootstrap");
 
-import { loadDynamicBannerText } from '/footer';
+import { loadDynamicBannerText } from '../components/footer';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
