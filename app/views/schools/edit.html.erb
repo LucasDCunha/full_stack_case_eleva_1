@@ -1,15 +1,22 @@
-<header>
+<nav class="navbar navbar-expand-lg navbar-light">
   <%= link_to root_path do %>
     <%= image_tag("cropped-logo_eleva.png", size: "100x100", class: "img") %>
   <% end %>
-  <div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      </li>
+    </ul>
     <%= link_to "Voltar", school_path(@school), class: "btn btn-outline-primary" %>
   </div>
-</header>
+</nav>
 
 <%= simple_form_for @school do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :city %>
-  <%= f.button :submit %>
+  <%= f.input :name, label: false, placeholder: "Nome da escola" %>
+  <%= f.input :address, label: false, placeholder: "Endereço" %>
+  <%= f.input :city, label: false, placeholder: "Cidade" %>
+  <%= f.button :submit, "Salvar", class: "btn btn-outline-secondary" %>
 <% end %>

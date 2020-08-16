@@ -60,4 +60,4 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'simple_form'
 
 # font-awsome for icons
-gem 'font-awesome-sass','~> 5.6.1'
+gem 'font_awesome5_rails'
